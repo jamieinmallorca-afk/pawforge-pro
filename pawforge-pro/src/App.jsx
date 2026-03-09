@@ -317,11 +317,12 @@ function formatAge(months) {
 }
 
 function getMaxSession(ageMonths, energy) {
+function getMaxSession(ageMonths, energy) {
   if (ageMonths < 6) return Math.max(5, ageMonths * 5);
-  if (ageMonths < 12) return 15;
-  if (ageMonths < 18) return 20;
+  if (ageMonths < 12) return 20;
+  if (ageMonths < 18) return 25;
   if (ageMonths > 96) return 15;
-  return { low: 10, medium: 20, high: 30, very_high: 40 }[energy] || 20;
+  return { low: 15, medium: 25, high: 35, very_high: 45 }[energy] || 25;
 }
 
 function getSessionsPerWeek(ageMonths, level) {
@@ -331,19 +332,19 @@ function getSessionsPerWeek(ageMonths, level) {
 }
 
 function getExercises(trainingType, level) {
-  let pool = EXERCISES[trainingType] || [];
-  if (!["basic_commands", "obedience"].includes(trainingType)) {
-    pool = [...(EXERCISES.basic_commands || []).slice(0, 3), ...pool];
-  }
+  const pool = EXERCISES[trainingType] || [];
   return pool.filter(e => e.levels.includes(level));
 }
 
 function buildSession(exercises, maxMins, weekNum, dogName) {
   const selected = [];
+  const used = new Set();
   let total = 0;
   for (const ex of exercises) {
+    if (used.has(ex.name)) continue;
     if (total + ex.duration_mins + ex.rest_after_mins <= maxMins) {
       selected.push(ex);
+      used.add(ex.name);
       total += ex.duration_mins + ex.rest_after_mins;
       if (selected.length >= 5) break;
     }
