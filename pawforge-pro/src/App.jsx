@@ -54,7 +54,7 @@ function getBreedInfo(breed) {
   for (const dbKey of Object.keys(BREED_DB)) {
     if (dbKey.includes(key) || key.includes(dbKey)) return BREED_DB[dbKey];
   }
-  return { energy: "medium", protection: false, notes: "Breed not in database. Using medium energy defaults. Adjust based on your dog's actual energy level." };
+  return { energy: "medium", protection: false, notes: "Breed not in database. Using medium energy defaults." };
 }
 
 const EXERCISE_GUIDES = {
@@ -74,7 +74,7 @@ const EXERCISE_GUIDES = {
     mistakes: ["Increasing distance too quickly - small increments build a rock-solid stay.", "Repeating 'stay, stay, stay' - one cue only.", "Punishing a broken stay - the dog may have been pushed too far too fast. Adjust the difficulty instead."],
   },
   "Come / Recall": {
-    steps: ["Start in a small, enclosed area with no distractions. Crouch down, open your arms, and call your dog's name followed by 'Come!' in a high, happy voice.", "When they reach you, make it a party - jackpot reward with multiple treats, praise, and a fuss. Make coming to you the best thing that ever happens.", "Gradually increase distance. Use a long line (5-10 metres) outdoors so the dog can't self-reward by running off.", "Practise surprise recalls during walks - call once, reward hugely, let them go again. The dog learns coming to you doesn't mean the fun stops.", "Proof the recall around distractions only after it's rock solid in calm environments."],
+    steps: ["Start in a small, enclosed area with no distractions. Crouch down, open your arms, and call your dog's name followed by 'Come!' in a high, happy voice.", "When they reach you, make it a party - jackpot reward with multiple treats, praise, and a fuss.", "Gradually increase distance. Use a long line (5-10 metres) outdoors so the dog can't self-reward by running off.", "Practise surprise recalls during walks - call once, reward hugely, let them go again.", "Proof the recall around distractions only after it's rock solid in calm environments."],
     tips: ["Never call your dog to you for something unpleasant - nail clipping, bath, ending play. Go and get them instead.", "If the dog doesn't come, never repeat the command - go to them, gently take the collar, and reward anyway.", "Use an emergency recall word trained with the highest-value rewards, saved only for genuine emergencies."],
     mistakes: ["Chasing the dog when they don't come - this turns it into a game and rewards ignoring you.", "Punishing a dog that eventually comes back - even if they took forever, always reward the return.", "Weak, flat tone of voice - recall needs enthusiasm. Sound like the best thing in the world."],
   },
@@ -91,10 +91,10 @@ const EXERCISE_GUIDES = {
   "Drop It": {
     steps: ["Let your dog pick up a toy they enjoy. Produce a high-value treat and hold it near their nose.", "As they open their mouth to take the treat, the toy will fall - the moment it hits the floor say 'Drop it' and give the treat.", "Repeat many times until the verbal cue alone causes them to release the toy.", "Once reliable, try with lower-value items, then eventually real-world objects.", "Always swap for something of equal or higher value - never just take without rewarding."],
     tips: ["Make it a game - drop it, pick up the toy, offer it back, then ask again. The dog learns that dropping doesn't mean losing it.", "Stay relaxed - tension in your body transfers to the dog and makes them grip tighter.", "Use 'drop it' consistently rather than 'give', 'leave', or 'out' to avoid confusion."],
-    mistakes: ["Chasing or grabbing - this creates a keep-away game and teaches the dog that having something is valuable.", "Only practising with toys - the dog needs to drop real items too.", "Punishing the dog for picking things up - this discourages them from bringing items to you, which you want in an emergency."],
+    mistakes: ["Chasing or grabbing - this creates a keep-away game.", "Only practising with toys - the dog needs to drop real items too.", "Punishing the dog for picking things up - this discourages them from bringing items to you."],
   },
   "Wait at Door": {
-    steps: ["Ask your dog to sit beside the door. Place your hand on the door handle.", "If they move, remove your hand from the handle - the door only opens when they're still.", "Crack the door open an inch. If they lunge, close it immediately. Crack it again only when they're seated.", "Gradually open further, rewarding the dog for remaining seated. Once fully open, give a release word like 'OK' before letting them through.", "Practise at every door - front door, car door, garden gate - for consistency."],
+    steps: ["Ask your dog to sit beside the door. Place your hand on the door handle.", "If they move, remove your hand from the handle - the door only opens when they're still.", "Crack the door open an inch. If they lunge, close it immediately.", "Gradually open further, rewarding the dog for remaining seated. Once fully open, give a release word before letting them through.", "Practise at every door - front door, car door, garden gate - for consistency."],
     tips: ["The door itself becomes the training tool - it only opens for a calm, seated dog.", "Practise when there's no actual urgency so you can take your time.", "Ask for eye contact before releasing - a dog looking at you at an open door is a safe dog."],
     mistakes: ["Letting them through occasionally without the sit - inconsistency undoes the training.", "Rushing the steps - patience at the door is built in tiny increments.", "Only practising at home - proof at the car, the vet, parks, anywhere there's a threshold."],
   },
@@ -104,22 +104,22 @@ const EXERCISE_GUIDES = {
     mistakes: ["Letting the lead go tight - once it tightens, stop and wait for slack before moving again.", "Rewarding when the dog is slightly ahead or behind - precision matters.", "Too long between rewards early on - the dog drifts off because there's no reason to stay close."],
   },
   "Loose Lead Walking": {
-    steps: ["Start in your garden or a quiet area. Hold the lead loosely - no tension.", "The moment the lead goes tight, stop completely. Don't walk forward again until the lead has slack.", "When the lead is slack, say 'Yes' and continue walking. Reward frequently for slack lead.", "If the dog constantly pulls, try changing direction - turn 180 degrees whenever tension appears. The dog learns that pulling = going nowhere.", "Build up gradually to busier environments as the skill becomes reliable."],
-    tips: ["Be consistent - every single step on a tight lead must result in stopping. One free pull undoes many good reps.", "Reward position - treat the dog when they're walking nicely beside you, not just when they happen to slacken the lead.", "Front-clip harnesses can help manage pullers while you train, but they're a management tool, not a substitute for training."],
+    steps: ["Start in your garden or a quiet area. Hold the lead loosely - no tension.", "The moment the lead goes tight, stop completely. Don't walk forward again until the lead has slack.", "When the lead is slack, say 'Yes' and continue walking. Reward frequently for slack lead.", "If the dog constantly pulls, try changing direction - turn 180 degrees whenever tension appears.", "Build up gradually to busier environments as the skill becomes reliable."],
+    tips: ["Be consistent - every single step on a tight lead must result in stopping.", "Reward position - treat the dog when they're walking nicely beside you.", "Front-clip harnesses can help manage pullers while you train, but they're a management tool, not a substitute for training."],
     mistakes: ["Continuing to walk while being pulled - this rewards the pulling with forward movement.", "Jerking the lead - creates anxiety and does not teach the dog what you want.", "Expecting too much too fast in exciting environments - build the skill in calm places first."],
   },
   "Sit-Stay with Distance": {
-    steps: ["Ask for a sit-stay using your hand signal and verbal cue.", "Take one step backwards, pause, step back in, and reward without the dog moving.", "Build to five steps, then ten, then across the room, then out of sight - each stage over multiple sessions.", "Vary your departure - step sideways, turn your back, crouch down - so the dog doesn't just stay when you walk backwards.", "Proof with mild distractions at each distance before adding more."],
+    steps: ["Ask for a sit-stay using your hand signal and verbal cue.", "Take one step backwards, pause, step back in, and reward without the dog moving.", "Build to five steps, then ten, then across the room, then out of sight.", "Vary your departure - step sideways, turn your back, crouch down.", "Proof with mild distractions at each distance before adding more."],
     tips: ["Return to the dog to reward - walking back to position reinforces the stay.", "If the dog breaks at any stage, reduce the distance or duration and rebuild.", "Use a long line outdoors for safety during distance work."],
     mistakes: ["Increasing distance before the stay is rock-solid up close.", "Only ever testing, never rewarding the stay - the dog needs to be paid for holding position.", "Staring intensely at the dog - direct eye contact creates pressure and triggers breaking."],
   },
   "Down-Stay Duration": {
-    steps: ["Ask your dog into a down. Reward immediately for lying down.", "Ask them to stay. Count 5 seconds silently - if they hold, reward and release.", "Build the duration in small steps: 10s, 20s, 30s, 1 minute, 3 minutes, 5 minutes.", "Vary the duration - sometimes reward after 10 seconds, sometimes after 2 minutes, so the dog can't predict when the reward is coming.", "Gradually introduce low-level distractions while maintaining the stay."],
+    steps: ["Ask your dog into a down. Reward immediately for lying down.", "Ask them to stay. Count 5 seconds silently - if they hold, reward and release.", "Build the duration in small steps: 10s, 20s, 30s, 1 minute, 3 minutes, 5 minutes.", "Vary the duration - sometimes reward after 10 seconds, sometimes after 2 minutes.", "Gradually introduce low-level distractions while maintaining the stay."],
     tips: ["The down-stay is the most valuable real-life exercise - a dog who will hold a down-stay anywhere is a joy to live with.", "Practise in every room of the house, in the garden, at the pub, in the park.", "A calm, settled dog holds a better stay - don't ask for it when the dog is overexcited."],
     mistakes: ["Building duration too fast - one failed rep sets you back several good ones.", "Releasing with excitement - a calm, quiet reward and release keeps the dog calm during the stay.", "Forgetting to proof in real environments - kitchen table stays don't automatically transfer to the park."],
   },
   "Recall under Distraction": {
-    steps: ["Start with very mild distractions - a boring toy on the ground, a person standing still nearby.", "Call your dog once in your best recall voice. If they come, huge reward.", "If they don't respond immediately, don't repeat - walk backwards away from them to create movement that encourages following.", "Gradually increase distraction level over many sessions: other dogs playing, food on the ground, exciting smells.", "Always make coming to you more rewarding than whatever they were doing."],
+    steps: ["Start with very mild distractions - a boring toy on the ground, a person standing still nearby.", "Call your dog once in your best recall voice. If they come, huge reward.", "If they don't respond immediately, don't repeat - walk backwards away from them to create movement.", "Gradually increase distraction level over many sessions.", "Always make coming to you more rewarding than whatever they were doing."],
     tips: ["Never poison the recall by calling when you're sure they won't come - set them up to succeed.", "Use a long line so you can follow through without chasing.", "Practise the 'check in' - reward your dog whenever they choose to look at you or come back without being called."],
     mistakes: ["Calling in a flat or frustrated tone - enthusiasm is everything.", "Punishing a slow recall - even if it took 30 seconds, reward the return.", "Only recalling to end the walk - the dog learns that coming means fun stops."],
   },
@@ -129,39 +129,39 @@ const EXERCISE_GUIDES = {
     mistakes: ["Rewarding before all four paws are on the mat.", "Moving to distance before duration is solid.", "Using the bed as a timeout - it will destroy the positive association."],
   },
   "Stand-Stay": {
-    steps: ["With your dog in front of you, hold a treat at nose height and slowly move it horizontally away from them - they should stand up from a sit to follow it.", "The moment all four paws are on the floor in a standing position, say 'Stand' and reward.", "Build a short stay in the stand position - 3 seconds, then 5, then 10.", "Touch your dog's side and back gently while standing - preparing them for vet and grooming handling.", "Practise the full sequence: sit - stand on cue - stay for handling - reward."],
+    steps: ["With your dog in front of you, hold a treat at nose height and slowly move it horizontally away from them.", "The moment all four paws are on the floor in a standing position, say 'Stand' and reward.", "Build a short stay in the stand position - 3 seconds, then 5, then 10.", "Touch your dog's side and back gently while standing - preparing them for vet and grooming handling.", "Practise the full sequence: sit - stand on cue - stay for handling - reward."],
     tips: ["The stand-stay is essential for vet visits, grooming, and working dog sports.", "Pair touching with treats so the dog associates being handled while standing with good things.", "Keep the stay short initially - the stand is naturally less stable than sit or down."],
-    mistakes: ["Moving the treat too high - dog will sit up rather than stand.", "Asking for too long a duration before the position is reliable.", "Not practising handling during the stand - the whole point is to have a calm, still dog during examination."],
+    mistakes: ["Moving the treat too high - dog will sit up rather than stand.", "Asking for too long a duration before the position is reliable.", "Not practising handling during the stand."],
   },
   "Socialisation Walk": {
-    steps: ["Choose a quiet route first - a residential street, a park at a calm time - rather than jumping straight into busy areas.", "Walk at a pace that keeps your dog under threshold - if they're staring, stiffening, or barking, you're too close to the distraction.", "When you spot a distraction (dog, person, traffic), mark and reward your dog for noticing it calmly or looking away.", "Gradually work closer to distractions over many sessions as the dog remains relaxed.", "Keep sessions short - 15 minutes of focused socialisation is more effective than an hour of overwhelming exposure."],
+    steps: ["Choose a quiet route first rather than jumping straight into busy areas.", "Walk at a pace that keeps your dog under threshold - if they're staring, stiffening, or barking, you're too close.", "When you spot a distraction, mark and reward your dog for noticing it calmly or looking away.", "Gradually work closer to distractions over many sessions as the dog remains relaxed.", "Keep sessions short - 15 minutes of focused socialisation is more effective than an hour of overwhelming exposure."],
     tips: ["Watch your dog's body language: loose body, sniffing, occasional glances = comfortable. Stiff, staring, high tail = too much.", "You control the distance - cross the road, create space, don't flood.", "Calm, controlled exposure builds confidence. Forced exposure creates fear."],
-    mistakes: ["Letting the dog greet every dog and person - over-greeting creates reactivity.", "Waiting until the dog is already reactive to reward - mark the calm noticing, not the barking.", "Overwhelming the dog with too much too soon - slow and steady builds a socially confident dog."],
+    mistakes: ["Letting the dog greet every dog and person - over-greeting creates reactivity.", "Waiting until the dog is already reactive to reward - mark the calm noticing, not the barking.", "Overwhelming the dog with too much too soon."],
   },
   "Off-Lead Heel": {
-    steps: ["Begin in a secure, enclosed area with no distractions.", "Remove the lead and immediately reward the dog for staying at your left side.", "Walk forward, rewarding every 2-3 steps for correct position - shoulder level with your left leg.", "Introduce left and right turns, halts, and pace changes - reward for maintaining position through each.", "Gradually increase the duration between rewards as the dog becomes fluent."],
+    steps: ["Begin in a secure, enclosed area with no distractions.", "Remove the lead and immediately reward the dog for staying at your left side.", "Walk forward, rewarding every 2-3 steps for correct position.", "Introduce left and right turns, halts, and pace changes.", "Gradually increase the duration between rewards as the dog becomes fluent."],
     tips: ["Off-lead heel is built on perfect on-lead heel - don't drop the lead until the on-lead version is reliable.", "Keep your left hand at your hip - it's the dog's target position.", "Make it fun - vary your pace and direction to keep the dog engaged."],
     mistakes: ["Going off-lead in an unsecured area before the behaviour is solid.", "Drilling long repetitions - short, sharp, rewarding sets build faster.", "Forgetting to reward - off-lead doesn't mean no rewards."],
   },
   "Impulse Control — It's Yer Choice": {
-    steps: ["Sit with your dog in front of you. Open your hand flat with a treat sitting on your palm.", "The moment your dog moves toward the treat, close your fist. Wait. The instant they pull back or look at you, open your hand and let them take it.", "Repeat until the dog sits and waits when your hand opens - they've learned that restraint gets the reward.", "Progress to placing the treat on the floor with your hand near it. Dog must wait until you give permission.", "Generalise: dog must wait at food bowl, before going through doors, before getting out of the car."],
+    steps: ["Sit with your dog in front of you. Open your hand flat with a treat sitting on your palm.", "The moment your dog moves toward the treat, close your fist. Wait. The instant they pull back or look at you, open your hand.", "Repeat until the dog sits and waits when your hand opens.", "Progress to placing the treat on the floor with your hand near it. Dog must wait until you give permission.", "Generalise: dog must wait at food bowl, before going through doors, before getting out of the car."],
     tips: ["This exercise rewires impulsive behaviour - patience becomes the strategy that works.", "Use high-value treats so the dog is genuinely tempted but choosing to wait.", "Keep your body language neutral - no commands, just open and close the hand based on the dog's choices."],
     mistakes: ["Giving verbal commands - let the dog work it out through their own choices.", "Rewarding when they've only partially backed off - wait for a clear choice to disengage.", "Expecting instant results - impulse control takes many sessions to become reliable."],
   },
   "Emergency Down": {
     steps: ["Start close to the dog. Say 'Down!' in a firm, urgent tone and lure or signal into position.", "Reward dramatically - this gets a jackpot reward every single time.", "Build distance: ask for the emergency down from 2 metres, then 5, then 10.", "Add movement - ask for it while the dog is walking, trotting, even running back toward you.", "Proof it in every environment and at every distance. This behaviour could save your dog's life."],
     tips: ["Keep a dedicated high-value reward for this exercise only - something the dog never gets otherwise.", "Practise it occasionally during normal walks so it stays sharp without being overused.", "Your tone of voice matters - it needs to be different and urgent enough to cut through excitement."],
-    mistakes: ["Using the emergency down too casually - it should stay sharp and meaningful.", "Not proofing at a distance - a recall-only emergency down isn't truly an emergency behaviour.", "Skimping on the reward - every successful emergency down should feel like the best thing ever."],
+    mistakes: ["Using the emergency down too casually - it should stay sharp and meaningful.", "Not proofing at a distance.", "Skimping on the reward - every successful emergency down should feel like the best thing ever."],
   },
   "Distraction Proofing": {
-    steps: ["Set up a controlled distraction - a treat on the floor, a toy, a person sitting nearby.", "Ask the dog to perform known commands (sit, down, stay, recall) near the distraction.", "Reward heavily for responding correctly despite the distraction being present.", "Gradually increase the intensity of the distraction over multiple sessions.", "Test in real-world environments: parks, car parks, pet shops, busy streets."],
+    steps: ["Set up a controlled distraction - a treat on the floor, a toy, a person sitting nearby.", "Ask the dog to perform known commands near the distraction.", "Reward heavily for responding correctly despite the distraction being present.", "Gradually increase the intensity of the distraction over multiple sessions.", "Test in real-world environments: parks, car parks, pet shops, busy streets."],
     tips: ["Start with distractions the dog finds mildly interesting, not overwhelming.", "Use your highest-value rewards - you're competing with genuinely exciting things.", "If the dog fails, the distraction is too hard. Make it easier and rebuild."],
-    mistakes: ["Jumping to high-level distractions before basics are solid.", "Punishing failures - the dog isn't being stubborn, they're simply being a dog. Adjust the difficulty.", "Only proofing at home - dogs don't generalise automatically, you must train in varied locations."],
+    mistakes: ["Jumping to high-level distractions before basics are solid.", "Punishing failures - the dog isn't being stubborn, they're simply being a dog.", "Only proofing at home - dogs don't generalise automatically."],
   },
   "Long Line Recall": {
     steps: ["Attach a 20-30 metre long line to a harness (never a collar - neck injury risk).", "Let the dog range freely while holding the end of the line loosely.", "After a minute or two, call once in your best recall voice. If they come, jackpot reward.", "If they don't respond, gently pick up the line and create light pressure toward you while continuing to call happily.", "Reward every recall regardless of how long it took."],
-    tips: ["The long line gives freedom while keeping safety - ideal for dogs building off-lead trust.", "Don't reel the dog in like a fish - gentle guidance plus happy voice.", "Alternate between recalls and releasing them back to free running - the dog learns coming to you isn't the end of fun."],
-    mistakes: ["Jerking the line sharply - this creates negative associations with recall.", "Always calling to end the session - recall only when you can also release them again sometimes.", "Using a long line without a harness - line tension on a collar is dangerous."],
+    tips: ["The long line gives freedom while keeping safety - ideal for dogs building off-lead trust.", "Don't reel the dog in like a fish - gentle guidance plus happy voice.", "Alternate between recalls and releasing them back to free running."],
+    mistakes: ["Jerking the line sharply - this creates negative associations with recall.", "Always calling to end the session.", "Using a long line without a harness - line tension on a collar is dangerous."],
   },
   "Boundary Training": {
     steps: ["Choose a clear boundary - the edge of a rug, the garden gate, the doorstep.", "Walk the dog to the boundary on lead. The moment they reach it, mark and reward for stopping.", "Drop the lead and encourage them to stay at the boundary while you step across it.", "Gradually increase your distance on the other side while the dog holds the boundary.", "Add a release word so the dog knows when crossing is allowed."],
@@ -171,92 +171,92 @@ const EXERCISE_GUIDES = {
   "Focus / Watch Me": {
     steps: ["Hold a treat between your eyes and say 'Watch me' or use a kissy noise.", "The instant the dog makes eye contact with your face (not the treat), mark and reward.", "Build duration - reward after 2 seconds of eye contact, then 5, then 10.", "Practise during walks: ask for focus as a distraction appears, reward for choosing to look at you instead.", "A dog that can focus on you in a busy environment is a dog that can be redirected from anything."],
     tips: ["Eye contact on cue is one of the most useful skills for managing reactive dogs.", "Make eye contact feel good - use a warm, happy tone when they look at you.", "Practise in every environment, not just at home."],
-    mistakes: ["Holding the treat between your eyes then moving it to reward - the dog learns to stare at the treat, not your eyes.", "Using a stern voice - the dog should want to look at you, not feel pressured to.", "Only asking for focus at home - you need it most outdoors."],
+    mistakes: ["Holding the treat between your eyes then moving it to reward - the dog learns to stare at the treat.", "Using a stern voice - the dog should want to look at you, not feel pressured to.", "Only asking for focus at home."],
   },
   "Tug Drive Building": {
     steps: ["Introduce a tug toy by wiggling it along the ground to trigger prey drive.", "When the dog grabs it, let them win occasionally to build confidence and enthusiasm.", "Build intensity over sessions - make the toy more exciting, play harder, let them shake it.", "Introduce 'out' from the very first session.", "Finish every tug session with the dog wanting more - stop while they're keen."],
     tips: ["Tug is not aggression - it's controlled prey drive and is one of the best reward tools for working dogs.", "The handler controls the game: it starts and ends on your terms.", "Keep the tug toy special - it should only appear during training, not left out for free play."],
-    mistakes: ["Letting the dog initiate tug whenever they want - this teaches the dog they control the game.", "Pulling straight back - move the toy side to side and unpredictably.", "Letting sessions end with the dog running off with the toy - always finish with an out and calm."],
+    mistakes: ["Letting the dog initiate tug whenever they want - this teaches the dog they control the game.", "Pulling straight back - move the toy side to side and unpredictably.", "Letting sessions end with the dog running off with the toy."],
   },
   "Out / Release Command": {
     steps: ["While the dog is tugging, go still and neutral - stop the game.", "Produce a high-value treat at their nose. As they open their mouth to take it, the toy falls - immediately say 'Out' and give the treat.", "Repeat until 'Out' alone causes the dog to release without a treat being produced.", "Build speed - reward faster releases more generously.", "Proof it in high-drive states - the out must work when the dog is excited, not just calm."],
     tips: ["Out must be 100% reliable for safety - this is non-negotiable in protection work.", "Never physically pry the dog's mouth open - this creates conflict and resistance.", "Reward the out with reengagement with the toy - out becomes the start of another round, not the end."],
-    mistakes: ["Punishing a slow out - frustration ruins the training. Be patient and reward speed.", "Only practising 'out' at the end of the session - proof it mid-game too.", "Using the same toy for out practice as everyday play - keep the training toy special."],
+    mistakes: ["Punishing a slow out - frustration ruins the training.", "Only practising 'out' at the end of the session - proof it mid-game too.", "Using the same toy for out practice as everyday play."],
   },
   "Bark and Hold": {
-    steps: ["This exercise requires a qualified decoy (training helper). The decoy acts agitated behind a barrier or on a sleeve.", "The dog is brought in on lead - they should bark at the decoy. Reward barking with access to the sleeve or tug toy.", "Gradually increase the duration of barking before access is given.", "The dog must bark and hold position - no biting until commanded.", "Introduce the 'out' cue after the bite to complete the sequence."],
+    steps: ["This exercise requires a qualified decoy. The decoy acts agitated behind a barrier or on a sleeve.", "The dog is brought in on lead - they should bark at the decoy. Reward barking with access to the sleeve or tug toy.", "Gradually increase the duration of barking before access is given.", "The dog must bark and hold position - no biting until commanded.", "Introduce the 'out' cue after the bite to complete the sequence."],
     tips: ["Always work with a qualified protection trainer for this exercise.", "The dog must have a solid 'out' before bark and hold training begins.", "Safety equipment may be required at early stages."],
-    mistakes: ["Attempting this without a qualified decoy.", "Skipping straight to bark and hold before foundation drive work is complete.", "Not rewarding the bark - the bark must be heavily reinforced or the dog will revert to biting without warning."],
+    mistakes: ["Attempting this without a qualified decoy.", "Skipping straight to bark and hold before foundation drive work is complete.", "Not rewarding the bark - the bark must be heavily reinforced."],
   },
   "Sleeve Introduction": {
     steps: ["Have a qualified decoy present the sleeve low and stationary. Allow the dog to sniff and investigate.", "Encourage the dog to grab the sleeve by having the decoy wiggle it gently along the ground.", "The moment the dog grips, reward with tug play on the sleeve - let them win.", "Keep first bites very short - excitement and reward, not prolonged gripping.", "Build grip confidence over many sessions before adding any complexity."],
     tips: ["The first sleeve experiences must be overwhelmingly positive - this sets the foundation.", "Use a soft, puppy sleeve for first introductions if the dog is inexperienced.", "Always end on a confident, full-grip bite - stop before the dog fatigues."],
-    mistakes: ["Introducing the sleeve too early before tug drive is well established.", "Allowing sloppy, side-of-the-mouth grips - encourage full, forward grips only.", "Training without a qualified decoy who can read the dog correctly."],
+    mistakes: ["Introducing the sleeve too early before tug drive is well established.", "Allowing sloppy, side-of-the-mouth grips - encourage full, forward grips only.", "Training without a qualified decoy."],
   },
   "Focused Heel to Decoy": {
     steps: ["With the decoy standing still and neutral, heel your dog past them at a distance.", "Reward heavily for maintaining heel position and not fixating on the decoy.", "Gradually decrease the distance you pass the decoy at while maintaining the heel.", "The dog must walk calmly past even when the decoy makes movement.", "This exercise proves the dog can be switched between civil and working states on command."],
     tips: ["Only attempt once heel and out are rock solid.", "Reward attention on the handler, not just absence of reaction to the decoy.", "Build slowly - weeks of work at greater distance before getting close."],
-    mistakes: ["Getting too close to the decoy too soon.", "Punishing drive - the dog should want to engage but be choosing to heel instead.", "Rushing this exercise - it is the foundation of real-world protection control."],
+    mistakes: ["Getting too close to the decoy too soon.", "Punishing drive - the dog should want to engage but be choosing to heel instead.", "Rushing this exercise."],
   },
   "Guard and Alert": {
-    steps: ["Have a stranger approach calmly. When the dog barks, mark and reward the bark.", "Build a 'speak' cue - ask for barking on command when the stranger appears.", "Then introduce 'quiet' - reward the dog for stopping barking on command.", "Build the sequence: stranger appears - dog barks on cue - dog stops on cue - dog watches stranger calmly.", "Proof with different people, different times of day, different entry points."],
-    tips: ["The goal is a dog that alerts reliably and then can be called off - not one that barks uncontrollably.", "Always work under threshold - don't allow the dog to spiral into uncontrolled arousal.", "This should only be trained in parallel with solid obedience."],
+    steps: ["Have a stranger approach calmly. When the dog barks, mark and reward the bark.", "Build a 'speak' cue - ask for barking on command when the stranger appears.", "Then introduce 'quiet' - reward the dog for stopping barking on command.", "Build the sequence: stranger appears - dog barks on cue - dog stops on cue - dog watches calmly.", "Proof with different people, different times of day, different entry points."],
+    tips: ["The goal is a dog that alerts reliably and then can be called off.", "Always work under threshold - don't allow the dog to spiral into uncontrolled arousal.", "This should only be trained in parallel with solid obedience."],
     mistakes: ["Rewarding frenzied, continuous barking rather than measured alerting.", "Never practising 'quiet' - the on switch without an off switch is dangerous.", "Allowing the dog to rehearse uncontrolled barking at strangers in daily life."],
   },
   "Obedience Under Drive": {
     steps: ["Run a short, sharp protection exercise - tug, bark and hold, or sleeve bite.", "Immediately after the out, ask for a sit-stay or down-stay.", "Reward the obedience response generously, then re-engage with the protection work.", "Alternate between protection drive and obedience - the dog learns to switch states instantly.", "Build to running a full obedience routine directly after drive work."],
     tips: ["This is the most important exercise in protection training - a dog with drive but no off-switch is dangerous.", "Keep obedience rewards high during this exercise.", "The dog should look forward to both - not see obedience as punishment after drive work."],
-    mistakes: ["Punishing the dog for slow compliance - they're in a high drive state, be patient.", "Only ever doing this in training sessions - proof it at competitions and in novel environments.", "Skipping this exercise - it's the cornerstone of a reliable protection dog."],
+    mistakes: ["Punishing the dog for slow compliance - they're in a high drive state, be patient.", "Only ever doing this in training sessions - proof it in novel environments.", "Skipping this exercise - it's the cornerstone of a reliable protection dog."],
   },
   "Nose Games — Find the Treat": {
     steps: ["Start with a treat in one hand - present both fists to the dog. When they nose the correct hand, open it and reward.", "Progress to hiding treats under 3 upturned cups - shuffle them, let the dog find the right one.", "Hide treats in a room while the dog waits outside - then release them to search.", "Build to hiding treats in harder locations: behind furniture, under mats, high up on shelves.", "Use a consistent release cue like 'Find it!' to start every search."],
-    tips: ["Nose games are mentally exhausting in the best way - 15 minutes of scent work tires a dog as much as an hour's walk.", "Let the dog work it out - resist the urge to point or help.", "Celebrate every find enthusiastically - the dog should love the game."],
-    mistakes: ["Hiding treats somewhere the dog has no chance of finding them early on - make it easy to build confidence.", "Helping too much - let the dog use their nose, not follow your direction.", "Rushing to harder hides before the dog is searching confidently."],
+    tips: ["Nose games are mentally exhausting in the best way - 15 minutes tires a dog as much as an hour's walk.", "Let the dog work it out - resist the urge to point or help.", "Celebrate every find enthusiastically."],
+    mistakes: ["Hiding treats somewhere the dog has no chance of finding them early on.", "Helping too much - let the dog use their nose.", "Rushing to harder hides before the dog is searching confidently."],
   },
   "Target Odour Introduction": {
-    steps: ["Place a tin with a small amount of target odour (anise/birch/clove) inside - covered with a mesh lid so the dog can smell but not access it.", "Present the tin. The moment the dog sniffs it, mark and reward with a treat from your hand (not from the tin).", "Repeat 10-15 times per session - build the odour = treat association.", "Begin presenting the tin among other odourless tins. Only reward interaction with the correct one.", "At this stage the dog doesn't need to alert - just investigate the correct odour."],
-    tips: ["Keep the target odour separate from food rewards to avoid contamination of the scent.", "Short sessions - 5 minutes maximum. Nose work is intense.", "Handle the target odour tin with gloves to keep the scent pure."],
-    mistakes: ["Rewarding sniffing of wrong tins - only the target odour earns a reward.", "Long sessions that fatigue the dog - quality over quantity.", "Using multiple odours before the first is fully established."],
+    steps: ["Place a tin with a small amount of target odour inside - covered with a mesh lid.", "Present the tin. The moment the dog sniffs it, mark and reward with a treat from your hand.", "Repeat 10-15 times per session.", "Begin presenting the tin among other odourless tins. Only reward interaction with the correct one.", "At this stage the dog doesn't need to alert - just investigate the correct odour."],
+    tips: ["Keep the target odour separate from food rewards to avoid contamination.", "Short sessions - 5 minutes maximum. Nose work is intense.", "Handle the target odour tin with gloves to keep the scent pure."],
+    mistakes: ["Rewarding sniffing of wrong tins - only the target odour earns a reward.", "Long sessions that fatigue the dog.", "Using multiple odours before the first is fully established."],
   },
   "Paired Odour Search": {
-    steps: ["Place the target odour tin with a treat inside (paired) among several plain containers.", "Release the dog to search - when they find and nose the correct container, the treat is already there as a reward.", "Over sessions, begin separating the treat from the odour - reward comes from your hand after the dog indicates.", "Build the association: target odour = good things happen right here.", "This stage is about making the dog odour-obsessed - it should be the most exciting smell in the world."],
-    tips: ["Pairing food with the odour creates a strong association - the smell itself becomes exciting.", "Keep it fun and rewarding - this is the foundation everything else is built on.", "Always let the dog find the target, never point or guide."],
-    mistakes: ["Removing the paired reward too early - the association needs to be deeply established first.", "Using the same container layout every time - vary placement to prevent pattern learning.", "Training with a tired or full dog - scent work requires energy and food motivation."],
+    steps: ["Place the target odour tin with a treat inside among several plain containers.", "Release the dog to search - when they find the correct container, the treat is already there.", "Over sessions, begin separating the treat from the odour - reward comes from your hand after the dog indicates.", "Build the association: target odour = good things happen right here.", "This stage is about making the dog odour-obsessed."],
+    tips: ["Pairing food with the odour creates a strong association - the smell itself becomes exciting.", "Keep it fun and rewarding.", "Always let the dog find the target, never point or guide."],
+    mistakes: ["Removing the paired reward too early.", "Using the same container layout every time.", "Training with a tired or full dog."],
   },
   "Alert Behaviour Shaping": {
     steps: ["Choose a specific alert: sit, down, or a paw tap - pick one and stick to it.", "Place the target odour. When the dog finds it, wait - don't reward until they offer the alert behaviour.", "Initially reward any approximation of the alert and shape toward the final behaviour.", "The chain becomes: find odour - perform alert - receive reward.", "Proof the alert behaviour at every container type and location."],
-    tips: ["Consistency is critical - the alert must look the same every time for you to read it reliably.", "The alert is the dog communicating 'I found it' - reward it like it's the most important thing ever.", "Work with a scent work instructor to shape a clean, reliable alert."],
-    mistakes: ["Accepting a sloppy alert - if the behaviour isn't clear, you'll miss finds in the field.", "Rewarding before the alert is performed - the dog must understand the sequence.", "Changing the alert behaviour partway through training - pick one and stick with it."],
+    tips: ["Consistency is critical - the alert must look the same every time.", "The alert is the dog communicating 'I found it' - reward it like it's the most important thing ever.", "Work with a scent work instructor to shape a clean, reliable alert."],
+    mistakes: ["Accepting a sloppy alert.", "Rewarding before the alert is performed.", "Changing the alert behaviour partway through training."],
   },
   "Container Search": {
     steps: ["Set out 8-10 identical boxes in a grid or row.", "Place the target odour in one box - let the dog search the entire row.", "When they alert on the correct box, reward immediately and enthusiastically.", "Vary which box is hot - never use the same position twice in a row.", "Introduce boxes of different sizes, types, and heights as the dog progresses."],
-    tips: ["Work the dog on lead initially so you can observe their behaviour at each container.", "Watch for changes in body language - tail movement, slower sniffing, head dip - these are signs of odour before the alert.", "Reward correctly, never accidentally - if you reward at the wrong box you'll confuse the dog."],
-    mistakes: ["Staring at the hot box - dogs read your body language and may alert where you look.", "Placing the hot box in the same position repeatedly - the dog learns pattern, not scent.", "Rushing through the search - let the dog work systematically."],
+    tips: ["Work the dog on lead initially so you can observe their behaviour at each container.", "Watch for changes in body language before the alert.", "Reward correctly, never accidentally."],
+    mistakes: ["Staring at the hot box - dogs read your body language.", "Placing the hot box in the same position repeatedly.", "Rushing through the search."],
   },
   "Area Search": {
-    steps: ["Define a search area clearly - rope off a section of a room or garden.", "Hide the target odour in the area before bringing the dog in.", "Release with 'Find it!' and let the dog systematically work the area.", "Don't direct the dog - observe their search pattern and only intervene to prevent them missing a section entirely.", "Build area size gradually over many sessions."],
-    tips: ["Handler movement matters - try to work the perimeter and let the dog quarter through the middle.", "Note where the dog slows down or shows interest - even before an alert, these are valuable observations.", "Time your searches - build stamina for longer area searches gradually."],
-    mistakes: ["Starting with too large an area - small and successful builds confidence.", "Helping the dog find the hide - let them figure it out.", "Not varying the hide location - every search should be a genuine puzzle."],
+    steps: ["Define a search area clearly - rope off a section of a room or garden.", "Hide the target odour in the area before bringing the dog in.", "Release with 'Find it!' and let the dog systematically work the area.", "Don't direct the dog - observe their search pattern.", "Build area size gradually over many sessions."],
+    tips: ["Handler movement matters - try to work the perimeter and let the dog quarter through the middle.", "Note where the dog slows down or shows interest.", "Time your searches - build stamina gradually."],
+    mistakes: ["Starting with too large an area.", "Helping the dog find the hide.", "Not varying the hide location."],
   },
   "Vehicle Search": {
-    steps: ["Start with just one vehicle, parked and stationary.", "Teach the dog to work the perimeter first - nose running along the lower edges of the vehicle.", "Hide the target odour in different locations: wheel arch, undercarriage, front grille, boot seam.", "Release with 'Find it!' and let the dog work around the vehicle systematically.", "Build to multiple vehicles once single-vehicle searches are reliable."],
-    tips: ["The undercarriage is the most challenging - practise getting the dog comfortable low-searching.", "Parked vehicles leak many competing smells - diesel, oil, rubber. The dog must learn to filter these.", "Always check under vehicles are clear of hazards before beginning."],
-    mistakes: ["Placing hides in the same spot repeatedly - vary every session.", "Working on running engines - scent dispersal changes with heat, start with cold vehicles.", "Skipping to vehicles before container and area searches are solid."],
+    steps: ["Start with just one vehicle, parked and stationary.", "Teach the dog to work the perimeter first - nose running along the lower edges.", "Hide the target odour in different locations: wheel arch, undercarriage, front grille, boot seam.", "Release with 'Find it!' and let the dog work around the vehicle systematically.", "Build to multiple vehicles once single-vehicle searches are reliable."],
+    tips: ["The undercarriage is the most challenging - practise getting the dog comfortable low-searching.", "Parked vehicles leak many competing smells - the dog must learn to filter these.", "Always check under vehicles are clear of hazards before beginning."],
+    mistakes: ["Placing hides in the same spot repeatedly.", "Working on running engines.", "Skipping to vehicles before container and area searches are solid."],
   },
   "Tracking Line": {
-    steps: ["Lay a track on grass - scuff your feet along a straight 20-metre line, drop treats every metre, place a jackpot reward at the end.", "Wait 30 minutes for the track to age slightly, then bring the dog to the start.", "Harness the dog on a long tracking line. Present the start of the track - let them sniff and begin following.", "Follow the dog - maintain slight tension on the line so you can feel their tracking rhythm. Don't rush them.", "Once the dog reaches the article at the end, huge reward and celebration."],
+    steps: ["Lay a track on grass - scuff your feet along a straight 20-metre line, drop treats every metre, place a jackpot reward at the end.", "Wait 30 minutes for the track to age slightly, then bring the dog to the start.", "Harness the dog on a long tracking line. Present the start of the track - let them sniff and begin following.", "Follow the dog - maintain slight tension on the line so you can feel their tracking rhythm.", "Once the dog reaches the article at the end, huge reward and celebration."],
     tips: ["Tracking is one of the most natural dog behaviours - let the nose lead and don't interfere.", "Short, successful tracks build confidence faster than long, difficult ones.", "Increase track age, length, and complexity very gradually over weeks."],
-    mistakes: ["Rushing the dog along the track - tracking is a slow, deliberate activity.", "Starting with old or complex tracks - fresh, straight, treat-laden tracks first.", "Pulling the dog off the track when they lose it - give them time to work it out."],
+    mistakes: ["Rushing the dog along the track.", "Starting with old or complex tracks.", "Pulling the dog off the track when they lose it."],
   },
 };
 
 const EXERCISES = {
   basic_commands: [
-    { name: "Sit", description: "Ask dog to sit using hand signal and verbal cue. Reward immediately on completion.", levels: ["untrained","beginner","intermediate","advanced"], duration_mins: 3, reps: "10-15 reps", reward_type: "treat", rest_after_mins: 1 },
-    { name: "Down", description: "From sit position, lure nose to ground until dog lies flat. Mark and reward.", levels: ["untrained","beginner","intermediate","advanced"], duration_mins: 3, reps: "8-12 reps", reward_type: "treat", rest_after_mins: 1 },
-    { name: "Stay", description: "Ask for sit or down, then take one step back. Return and reward. Build duration slowly.", levels: ["beginner","intermediate","advanced"], duration_mins: 4, reps: "5-8 reps", reward_type: "treat", rest_after_mins: 2 },
+    { name: "Sit", description: "Ask dog to sit using hand signal and verbal cue. Reward immediately on completion.", levels: ["untrained","beginner"], duration_mins: 3, reps: "10-15 reps", reward_type: "treat", rest_after_mins: 1 },
+    { name: "Down", description: "From sit position, lure nose to ground until dog lies flat. Mark and reward.", levels: ["untrained","beginner"], duration_mins: 3, reps: "8-12 reps", reward_type: "treat", rest_after_mins: 1 },
+    { name: "Stay", description: "Ask for sit or down, then take one step back. Return and reward. Build duration slowly.", levels: ["beginner","intermediate"], duration_mins: 4, reps: "5-8 reps", reward_type: "treat", rest_after_mins: 2 },
     { name: "Come / Recall", description: "Call dog's name then 'come'. Reward heavily every time. Never punish a dog that comes to you.", levels: ["untrained","beginner","intermediate","advanced"], duration_mins: 5, reps: "8-10 reps", reward_type: "treat", rest_after_mins: 2 },
-    { name: "Name Recognition", description: "Say dog's name once. When they look at you, mark and reward. Foundation for all training.", levels: ["untrained","beginner"], duration_mins: 2, reps: "15-20 reps", reward_type: "treat", rest_after_mins: 1 },
+    { name: "Name Recognition", description: "Say dog's name once. When they look at you, mark and reward. Foundation for all training.", levels: ["untrained"], duration_mins: 2, reps: "15-20 reps", reward_type: "treat", rest_after_mins: 1 },
     { name: "Leave It", description: "Place treat on floor, cover with hand. When dog stops trying, reward with different treat.", levels: ["beginner","intermediate","advanced"], duration_mins: 3, reps: "8-10 reps", reward_type: "treat", rest_after_mins: 1 },
     { name: "Drop It", description: "Offer toy, when dog takes it say 'drop', swap for treat. Never chase or snatch.", levels: ["beginner","intermediate","advanced"], duration_mins: 3, reps: "6-8 reps", reward_type: "treat", rest_after_mins: 1 },
     { name: "Wait at Door", description: "Ask dog to sit at door, open door slowly, reward for staying still before releasing.", levels: ["intermediate","advanced"], duration_mins: 4, reps: "5-8 reps", reward_type: "treat", rest_after_mins: 2 },
@@ -317,7 +317,6 @@ function formatAge(months) {
 }
 
 function getMaxSession(ageMonths, energy) {
-function getMaxSession(ageMonths, energy) {
   if (ageMonths < 6) return Math.max(5, ageMonths * 5);
   if (ageMonths < 12) return 20;
   if (ageMonths < 18) return 25;
@@ -340,7 +339,12 @@ function buildSession(exercises, maxMins, weekNum, dogName) {
   const selected = [];
   const used = new Set();
   let total = 0;
-  for (const ex of exercises) {
+
+  // Rotate starting position based on week so different exercises lead each week
+  const offset = (weekNum - 1) % exercises.length;
+  const rotated = [...exercises.slice(offset), ...exercises.slice(0, offset)];
+
+  for (const ex of rotated) {
     if (used.has(ex.name)) continue;
     if (total + ex.duration_mins + ex.rest_after_mins <= maxMins) {
       selected.push(ex);
@@ -349,9 +353,9 @@ function buildSession(exercises, maxMins, weekNum, dogName) {
       if (selected.length >= 5) break;
     }
   }
-  if (selected.length < 2 && exercises.length > 0) {
+  if (selected.length < 1 && exercises.length > 0) {
     selected.push(exercises[0]);
-    total = Math.min(5, maxMins);
+    total = exercises[0].duration_mins;
   }
   return { session_number: weekNum, session_name: `Week ${weekNum} Training Session`, total_mins: total, exercises: selected, notes: `Always end on a success. Keep ${dogName} wanting more!` };
 }
